@@ -17,7 +17,7 @@ public class UniqueList {
        int readIndex = 0;
        int writeIndex =0;
 
-        Set<Integer> hasSet = new LinkedHashSet<>();
+       Set<Integer> hasSet = new LinkedHashSet<>();
 
        while(readIndex != arr.length){
             if(!hasSet.contains(arr[readIndex])){
