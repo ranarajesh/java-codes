@@ -5,13 +5,13 @@ import java.util.Hashtable;
 public class LongestSubstring {
     public static int lengthOfLongestSubstring(String s) {
         int strLen = s.length();
-        if(strLen == 0) return 0;
+        if(strLen <=1 ) return strLen;
 
-        int startWindow = 0, longest =0, windowLength = 0;
+        int i, startWindow = 0, longest =0, windowLength = 0;
 
         Hashtable<Character, Integer> lastSeenAt = new Hashtable<Character, Integer>();
 
-        for(int i=0; i<strLen; ++i){
+        for(i=0; i<strLen; ++i){
             char currChar = s.charAt(i);
             if(!lastSeenAt.containsKey(currChar)){
                 lastSeenAt.put(currChar, i);
@@ -24,12 +24,16 @@ public class LongestSubstring {
                 lastSeenAt.replace(currChar, i);
             }
         }
-        System.out.println(lastSeenAt);
-        return Math.max(longest, windowLength);
+        if(longest < i-startWindow){
+            longest = i-startWindow;
+        }
+        return longest;
     }
 
     public static void main(String[] arg) {
         String[] inputs = {
+                " ",
+                "au",
                 "abcabcbb",
                 "pwwkew",
                 "bbbbb",
