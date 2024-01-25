@@ -20,3 +20,8 @@ public class isPalindrom {
         System.out.println(isPalindrom.palindrome(s));
     }
 }
+
+        1
+        5
+        0
+        4
