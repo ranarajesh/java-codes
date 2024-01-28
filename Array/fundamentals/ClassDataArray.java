@@ -11,7 +11,8 @@ public class ClassDataArray {
         int j ;
         for (j =0; j<nElems; j++){
             if(perArr[j].getLastName().equals(searchName)){
-                //The key field (the last name) is now a String object, so comparisons require the equals() method rather than the == operator. The getLast() method of Person obtains the last name of a Person object, and equals() does the comparison:
+                //The key field (the last name) is now a String object, so comparisons require the equals() method 
+                //rather than the == operator. The getLast() method of Person obtains the last name of a Person object, and equals() does the comparison:
                 break;
             }
         }
