@@ -27,7 +27,7 @@ public class ClassDataApp {
         // deleting
         arr.delete("Smith");
         arr.displayP();
-        System.out.println("teste");
+        System.out.println("Tested...");
 
     }
 
