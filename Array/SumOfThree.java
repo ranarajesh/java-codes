@@ -10,26 +10,29 @@ public class SumOfThree {
     public static boolean findSumOfThree(int nums[], int target) {
         // First Sort the array
         Arrays.sort(nums);
-        int low, high, triples;
-        for(int i=0; i<nums.length-2; i++){
+        int low, high, targetSum;
+        for(int i=0; i<nums.length; i++){
             low = i+1;
             high = nums.length -1;
-            while (low < high){
-                triples = nums[i] + nums[low] + nums[high];
-                if(triples == target){
-                    return true;
+            targetSum = target - nums[i];
+            while(low < high){
+                int sum = nums[low] + nums[high];
+                if(sum == targetSum) return true;
+                if(sum < targetSum){
+                    low++;
+                }else{
+                    high--;
                 }
-                low++;
-                high--;
             }
+
         }
         return false;
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 7, 1, 2, 8, 4, 5};
+        int[] arr = {3, 7, 1, 2, 8, 4, 5, 10};
 
-        boolean check = SumOfThree.findSumOfThree(arr, 10);
+        boolean check = SumOfThree.findSumOfThree(arr, 20);
         System.out.println(check);
     }
 }
