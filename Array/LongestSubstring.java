@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 import java.util.Hashtable;
 

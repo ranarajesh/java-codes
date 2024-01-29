@@ -1,4 +1,4 @@
-package Array.Easy;
+package Array;
 
 public class ReverseString {
     public char[] reverseString(char[] s) {

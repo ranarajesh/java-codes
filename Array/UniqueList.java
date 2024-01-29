@@ -1,6 +1,5 @@
-package Array.medium;
+package Array;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;

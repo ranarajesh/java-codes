@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 public class FindAvgOfSubArray {
     public static double[] findMaxAverage(int[] nums, int k) {

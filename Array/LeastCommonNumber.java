@@ -1,4 +1,6 @@
-import java.util.*;
+package Array;
+
+import java.util.Arrays;
 
 class LeastCommonNumber {
 	static Integer findLeastCommonNumber(int[] arr1, int[] arr2, int[] arr3) {

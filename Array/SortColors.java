@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 public class SortColors {
     public int[] sortColors(int[] nums) {

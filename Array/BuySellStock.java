@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 public class BuySellStock {
 

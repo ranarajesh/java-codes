@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 class HappyNumber {
     public static int sumOfSquaredDigits(int number) {

@@ -1,4 +1,4 @@
-package Array.medium;
+package Array;
 
 public class SmallestSubArrSum {
     public static int smallestSubArr(int[] arr, int target){

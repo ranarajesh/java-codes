@@ -1,5 +1,8 @@
-// Importing required functions
-import java.util.*;
+package Array;// Importing required functions
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class RotateArray {
 	static void rotateArray(List<Integer> nums, int n) {

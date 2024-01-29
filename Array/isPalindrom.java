@@ -1,4 +1,4 @@
-package Array.Easy;
+package Array;
 
 public class isPalindrom {
     public static boolean palindrome(String s) {
