@@ -1,0 +1,4 @@
+## the issue with the bankserive class that it has many responsibilities to do and has multiple reasons to change/modifiy the
+class, which voilets the SRP (Single Responsibility Principle)
+
+Solution :- Seprate out the single repsonsible method from bank service class and creat a new class with SRP
