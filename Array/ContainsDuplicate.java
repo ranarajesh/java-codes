@@ -1,3 +1,6 @@
+package Array;
+import java.util.*;
+
 class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> numSeen = new HashSet<>();
