@@ -1,36 +1,30 @@
 import java.util.*;
-
 class MergeIntervals {
+
     public static int[][] mergeIntervals(int[][] intervals) {
-        // If the list is empty
         List<int[]> result = new ArrayList<>();
         if (intervals.length == 0) {
-            System.out.println("The list is empty");
             return result.toArray(new int[][]{});
         }
-        // Adding pair in the result list
+
         result.add(new int[]{intervals[0][0], intervals[0][1]});
-        
+
         for (int i = 1; i < intervals.length; i++) {
-            // Getting the recent added interval in the result list
             int[] lastAddedInterval = result.get(result.size() - 1);
-            // Getting and initializing input pair
             int currStart = intervals[i][0];
             int currEnd = intervals[i][1];
-            
-            System.out.println("\n\t\t\tCurrent input interval: [" + currStart + ", " + currEnd + "]\n");
-            // Getting the ending timestamp of the previous interval
             int prevEnd = lastAddedInterval[1];
-            
-            System.out.println("\t\t\t" + "|    " + "curStart" + "   |    " + "curEnd" + "   |");
-            System.out.println("\t\t\t" + " ----------------------------- ");
-            System.out.println("\t\t\t" + "|    " + currStart + "          |    " + currEnd + "        |");
+
+            if (currStart <= prevEnd) {
+                result.get(result.size() - 1)[1] = Math.max(currEnd, prevEnd);
+            } else {
+                result.add(new int[]{currStart, currEnd});
+            }
         }
-        
+
         return result.toArray(new int[][]{});
     }
-    
-    // Driver code
+
     public static void main(String[] args) {
         int[][][] allIntervals = {
             {{1, 5}, {3, 7}, {4, 6}},
@@ -47,6 +41,7 @@ class MergeIntervals {
         for (int i = 0; i < allIntervals.length; i++) {
             System.out.println(i + 1 + ".\tIntervals to merge: " + Arrays.deepToString(allIntervals[i]));
             int[][] result = mergeIntervals(allIntervals[i]);
+            System.out.println("\tMerged intervals: " + Arrays.deepToString(result));
             System.out.println(new String(new char[100]).replace('\0', '-'));
         }
     }
