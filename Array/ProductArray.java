@@ -1,31 +1,22 @@
+import java.sql.Array;
+import java.util.Arrays;
+
 class ProductArray  
 {  
-  public static int[] findProduct(int arr[])  
+  public static int[] findProduct(int[] nums)  
   { 
-    int n = arr.length;
-    int i, temp = 1; 
-
-    // Allocation of result array
-    int result[] = new int[n]; 
-
-    // Product of elements on left side excluding arr[i]
-    for (i = 0; i < n; i++)  
-    { 
-      result[i] = temp; 
-      temp *= arr[i]; 
-    } 
-
-    // Initializing temp to 1 for product on right side
-    temp = 1; 
-
-    // Product of elements on right side excluding arr[i] 
-    for (i = n - 1; i >= 0; i--)  
-    { 
-      result[i] *= temp; 
-      temp *= arr[i]; 
-    }
-
-    return result; 
+        int numsLen = nums.length;
+        int[] ans = new int[numsLen];
+        ans[0] = 1;
+        for(int i=1; i<numsLen; ++i){
+            ans[i] = ans[i-1] * nums[i-1];
+        }
+        int prod = 1;
+        for(int i=numsLen-1; i>=0; --i){
+            ans[i] = ans[i] * prod;
+            prod = prod * nums[i];
+        }
+        return ans; 
   } 
   public static String arrayToString(int arr[]){
     if (arr.length > 0){
@@ -42,12 +33,10 @@ class ProductArray
 
   public static void main(String args[]) {
 
-    int[] arr = {-1, 2, -3, 4, -5};
-
-    System.out.println("Array before product: " + arrayToString(arr));
-
-    int[] prodArray = findProduct(arr);
-
-    System.out.println("Array after product: " + arrayToString(prodArray));
+    int[][] arr = {{1,2,3,4},{-1, 2, -3, 4, -5}};
+    for (int[] is : arr) {
+      System.out.print(Arrays.toString(is));
+      System.out.println("-->"+Arrays.toString(findProduct(is)));
+    }
   }
 } 
