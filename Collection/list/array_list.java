@@ -1,6 +1,9 @@
 package Collection.list;
 
 import java.util.List;
+
+import java.util.Iterator;
+
 import java.util.ArrayList;
 public class array_list {
     public static void main(String[] args) {
@@ -45,6 +48,19 @@ public class array_list {
         System.out.println(strList);
         System.out.println("First index is "+strList.indexOf("orange"));
         System.out.println("Last index is "+strList.lastIndexOf("orange"));
+
+        // Iteration using for loop 
+        for (int i = 0; i < strList.size(); i++) {
+                System.out.println(strList.get(i));
+        }
+
+        //Iterator 
+        System.out.println("----------------");
+        Iterator itr  = strList.iterator();
+        System.out.println(itr.next());
+        System.out.println(itr.next());
+
+        
 
 
     }
