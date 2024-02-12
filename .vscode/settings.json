@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/rajeshrana/Documents/Research_Work/Java/idea-workspace/java-codes/**/*.jar"
+    ]
+}
