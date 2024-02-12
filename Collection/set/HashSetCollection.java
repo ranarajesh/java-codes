@@ -26,6 +26,8 @@ public class HashSetCollection {
         set.add(23);
 		set.add(34);
 		set.add(56);
+        //set.add(null);
+        //set.add(null);
         System.out.println(set);
         for(int i : set){
             System.out.println(i);
