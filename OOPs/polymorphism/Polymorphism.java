@@ -5,9 +5,7 @@ public class Polymorphism {
     // For example, take the Shape class, the exact shape you choose can be anything. It can be Rectangle, circle, a polygon or a diamond. So, these are all shapes but their properties are different. 
     // Each of the above classes has their own implementation of calculateArea() in their respective class which inherited from Parent class 
 
-    public double getArea(){
-
-    }
+    public double getArea(){ return 0; }
 }
 
 class Rectangle extends Polymorphism{
