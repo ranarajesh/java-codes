@@ -6,11 +6,6 @@ public class ClassDeclaration {
     public static void main(String[] args) {
         int var2; // Local variable should be initialised 
         System.out.println(var1);
-        try {
-            System.out.println(var2);  // It will not handle in runtime error because it give compilation error. 
-        } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println(e);
-        }
+        System.out.println(var2);  // It will not handle in runtime error because it give compilation error. 
     }
 }
