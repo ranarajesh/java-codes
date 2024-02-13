@@ -23,6 +23,10 @@ public class InheritenceClass {
     // Note: Some classes cannot be inherited. Such classes are defined with the keyword, final. An example of such a class is the built-in Integer class - this class cannot have derived classes.
     // In Java, we have to use the keyword extends to implement inheritance:
     // Note: In Java, a class can extend from only one other class at a time and a class cannot extend itself.
+    // type of inheritence : single, multi-level , multiple, hierarchical, hybrid 
+    // Note: In Java, Multiple and Hybrid inheritance are applicable using interfaces only.
+    // Advantages of Inheritence: Re-usability, data hiding, extensibility, Avoiding Duplication of Code
+
 
     private String make; 
     private String color; 
