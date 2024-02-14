@@ -50,6 +50,10 @@ public class InheritenceClass {
         System.out.println("Model: " + model);
     }
 
+    public final void finalFun(){
+        System.out.println("Final Method defined in base class");
+    }
+
 }
 
 // Derived class 
@@ -67,6 +71,11 @@ class Car extends InheritenceClass{
         System.out.println("Body Style: " + bodyStyle);
     }
 
+    // Cannot override the final method from InheritenceClassJava(67109265)
+    /* public final void finalFun(){ 
+        
+    }
+    */
     public static void main(String[] args) {
         Car car = new Car("Skoda", "Lava Blue", 2023, "Kushaq", "SUV");
         car.carDetails();

@@ -65,6 +65,7 @@ class Parrot extends InterfaceClass implements CanFly{
     public void flying() {
         System.out.println("Parrot is Flying");
         System.out.println(test);
+        // test = 10; // The final field CanFly.test cannot be assigned
     }
     
 }
