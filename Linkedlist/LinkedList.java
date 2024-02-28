@@ -46,6 +46,18 @@ public class LinkedList<T> {
 
     }
 
+    public void printList(SinglyNode<Integer> head){
+        var temp = head;
+        while (temp != null) {
+            System.out.print(temp.data);
+            temp = temp.next;
+            if (temp != null) {
+                System.out.print(" → ");
+            }
+        }
+        System.out.print(" → null ");
+
+    }
     public int countNodes() {
     var temp = this.head;
     int i = 0;
